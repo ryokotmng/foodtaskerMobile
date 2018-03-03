@@ -128,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="798" y="133"/>
         </scene>
-        <!--View Controller-->
+        <!--Restaurant View Controller-->
         <scene sceneID="0rK-vQ-9gg">
             <objects>
-                <viewController id="AeO-l1-MGE" sceneMemberID="viewController">
+                <viewController id="AeO-l1-MGE" customClass="RestaurantViewController" customModule="FoodTaskerMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oCZ-Lh-JAF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,6 +220,9 @@
                     <navigationItem key="navigationItem" id="Vg2-SZ-hjX">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="icon_menu_24dp" id="jCk-Av-2Vg"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="menuBarButton" destination="jCk-Av-2Vg" id="k9J-Eg-6Cf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VGg-MC-qT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

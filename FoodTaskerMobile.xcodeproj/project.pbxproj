@@ -15,6 +15,7 @@
 		A01B6407200C9335009E4871 /* FoodTaskerMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B6406200C9335009E4871 /* FoodTaskerMobileTests.swift */; };
 		A01B6412200C9335009E4871 /* FoodTaskerMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B6411200C9335009E4871 /* FoodTaskerMobileUITests.swift */; };
 		A01B6422200F209D009E4871 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01B6421200F209D009E4871 /* SWRevealViewController.m */; };
+		A0444F98204AD8D0001C9202 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F97204AD8D0001C9202 /* RestaurantViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		A01B641F200F209C009E4871 /* FoodTaskerMobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodTaskerMobile-Bridging-Header.h"; sourceTree = "<group>"; };
 		A01B6420200F209C009E4871 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		A01B6421200F209D009E4871 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		A0444F97204AD8D0001C9202 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				A01B63F8200C9335009E4871 /* Assets.xcassets */,
 				A01B63FA200C9335009E4871 /* LaunchScreen.storyboard */,
 				A01B63FD200C9335009E4871 /* Info.plist */,
+				A0444F97204AD8D0001C9202 /* RestaurantViewController.swift */,
 			);
 			path = FoodTaskerMobile;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A01B63F4200C9335009E4871 /* ViewController.swift in Sources */,
+				A0444F98204AD8D0001C9202 /* RestaurantViewController.swift in Sources */,
 				A01B63F2200C9335009E4871 /* AppDelegate.swift in Sources */,
 				A01B6422200F209D009E4871 /* SWRevealViewController.m in Sources */,
 			);
@@ -450,7 +454,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = myapp.FoodTaskerMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "FoodTaskerMobile/FoodTaskerMobile-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ryokotominaga/projects/FoodTaskerMobile/FoodTaskerMobile/Lib/FoodTaskerMobile-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -468,7 +472,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = myapp.FoodTaskerMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "FoodTaskerMobile/FoodTaskerMobile-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ryokotominaga/projects/FoodTaskerMobile/FoodTaskerMobile/Lib/FoodTaskerMobile-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
