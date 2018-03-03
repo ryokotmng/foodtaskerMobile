@@ -203,6 +203,10 @@
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="AeO-l1-MGE" id="t8D-7f-R9N"/>
+                                    <outlet property="delegate" destination="AeO-l1-MGE" id="xQe-43-Fmx"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -228,10 +232,10 @@
             </objects>
             <point key="canvasLocation" x="797.60000000000002" y="1552.4630541871923"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Customer Menu Table View Controller-->
         <scene sceneID="ah9-pU-nNA">
             <objects>
-                <tableViewController id="AzW-m1-cuT" sceneMemberID="viewController">
+                <tableViewController id="AzW-m1-cuT" customClass="CustomerMenuTableViewController" customModule="FoodTaskerMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SXV-YS-zW7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -448,6 +452,6 @@
         <image name="splash_screen" width="185" height="110"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ToS-T0-Qev"/>
+        <segue reference="8jx-VD-96h"/>
     </inferredMetricsTieBreakers>
 </document>
