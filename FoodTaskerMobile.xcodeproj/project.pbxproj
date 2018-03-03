@@ -17,6 +17,7 @@
 		A01B6422200F209D009E4871 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01B6421200F209D009E4871 /* SWRevealViewController.m */; };
 		A0444F98204AD8D0001C9202 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F97204AD8D0001C9202 /* RestaurantViewController.swift */; };
 		A0444F9A204ADED8001C9202 /* CustomerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F99204ADED8001C9202 /* CustomerMenuTableViewController.swift */; };
+		A0444F9C204AE650001C9202 /* MealListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F9B204AE650001C9202 /* MealListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		A01B6421200F209D009E4871 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A0444F97204AD8D0001C9202 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		A0444F99204ADED8001C9202 /* CustomerMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerMenuTableViewController.swift; sourceTree = "<group>"; };
+		A0444F9B204AE650001C9202 /* MealListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				A01B63FD200C9335009E4871 /* Info.plist */,
 				A0444F97204AD8D0001C9202 /* RestaurantViewController.swift */,
 				A0444F99204ADED8001C9202 /* CustomerMenuTableViewController.swift */,
+				A0444F9B204AE650001C9202 /* MealListTableViewController.swift */,
 			);
 			path = FoodTaskerMobile;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			files = (
 				A01B63F4200C9335009E4871 /* ViewController.swift in Sources */,
 				A0444F98204AD8D0001C9202 /* RestaurantViewController.swift in Sources */,
+				A0444F9C204AE650001C9202 /* MealListTableViewController.swift in Sources */,
 				A01B63F2200C9335009E4871 /* AppDelegate.swift in Sources */,
 				A0444F9A204ADED8001C9202 /* CustomerMenuTableViewController.swift in Sources */,
 				A01B6422200F209D009E4871 /* SWRevealViewController.m in Sources */,
