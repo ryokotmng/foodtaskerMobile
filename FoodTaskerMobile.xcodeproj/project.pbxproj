@@ -18,6 +18,7 @@
 		A0444F98204AD8D0001C9202 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F97204AD8D0001C9202 /* RestaurantViewController.swift */; };
 		A0444F9A204ADED8001C9202 /* CustomerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F99204ADED8001C9202 /* CustomerMenuTableViewController.swift */; };
 		A0444F9C204AE650001C9202 /* MealListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F9B204AE650001C9202 /* MealListTableViewController.swift */; };
+		A0444F9E204AFFFA001C9202 /* MealDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F9D204AFFFA001C9202 /* MealDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		A0444F97204AD8D0001C9202 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		A0444F99204ADED8001C9202 /* CustomerMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerMenuTableViewController.swift; sourceTree = "<group>"; };
 		A0444F9B204AE650001C9202 /* MealListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListTableViewController.swift; sourceTree = "<group>"; };
+		A0444F9D204AFFFA001C9202 /* MealDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				A0444F97204AD8D0001C9202 /* RestaurantViewController.swift */,
 				A0444F99204ADED8001C9202 /* CustomerMenuTableViewController.swift */,
 				A0444F9B204AE650001C9202 /* MealListTableViewController.swift */,
+				A0444F9D204AFFFA001C9202 /* MealDetailsViewController.swift */,
 			);
 			path = FoodTaskerMobile;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A01B63F4200C9335009E4871 /* ViewController.swift in Sources */,
+				A0444F9E204AFFFA001C9202 /* MealDetailsViewController.swift in Sources */,
 				A0444F98204AD8D0001C9202 /* RestaurantViewController.swift in Sources */,
 				A0444F9C204AE650001C9202 /* MealListTableViewController.swift in Sources */,
 				A01B63F2200C9335009E4871 /* AppDelegate.swift in Sources */,
