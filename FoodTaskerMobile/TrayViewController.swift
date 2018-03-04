@@ -1,14 +1,14 @@
 //
-//  RestaurantViewController.swift
+//  TrayViewController.swift
 //  FoodTaskerMobile
 //
-//  Created by Ryoko Tominaga on 2018/03/03.
+//  Created by Ryoko Tominaga on 2018/03/04.
 //  Copyright © 2018年 Ryoko Tominaga. All rights reserved.
 //
 
 import UIKit
 
-class RestaurantViewController: UIViewController {
+class TrayViewController: UIViewController {
 
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
     
@@ -24,7 +24,7 @@ class RestaurantViewController: UIViewController {
     }
 }
 
-extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource {
+extension TrayViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -32,7 +32,7 @@ extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource {
         return 3
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TrayItemCell", for: indexPath)
         
         return cell
     }
