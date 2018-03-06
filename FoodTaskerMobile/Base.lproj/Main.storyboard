@@ -709,10 +709,10 @@
             </objects>
             <point key="canvasLocation" x="3932" y="1548"/>
         </scene>
-        <!--View Controller-->
+        <!--Order View Controller-->
         <scene sceneID="4nJ-4Z-d9U">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="oJa-t7-mau" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="oJa-t7-mau" customClass="OrderViewController" customModule="FoodTaskerMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bgW-Gm-DfV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -813,6 +813,9 @@
                     <navigationItem key="navigationItem" id="JGs-rW-vU9">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="icon_menu_24dp" id="hmU-AC-ang"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="menuBarButton" destination="hmU-AC-ang" id="t2c-CE-tpT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSj-qm-Qyz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -17,6 +17,7 @@
 		A01B6412200C9335009E4871 /* FoodTaskerMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B6411200C9335009E4871 /* FoodTaskerMobileUITests.swift */; };
 		A01B6422200F209D009E4871 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01B6421200F209D009E4871 /* SWRevealViewController.m */; };
 		A02D0AB3204CA8E7000B9A71 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D0AB2204CA8E7000B9A71 /* PaymentViewController.swift */; };
+		A02D0AB5204F54F0000B9A71 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D0AB4204F54F0000B9A71 /* OrderViewController.swift */; };
 		A0444F98204AD8D0001C9202 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F97204AD8D0001C9202 /* RestaurantViewController.swift */; };
 		A0444F9A204ADED8001C9202 /* CustomerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F99204ADED8001C9202 /* CustomerMenuTableViewController.swift */; };
 		A0444F9C204AE650001C9202 /* MealListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F9B204AE650001C9202 /* MealListTableViewController.swift */; };
@@ -61,6 +62,7 @@
 		A01B6420200F209C009E4871 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		A01B6421200F209D009E4871 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A02D0AB2204CA8E7000B9A71 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		A02D0AB4204F54F0000B9A71 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		A0444F97204AD8D0001C9202 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		A0444F99204ADED8001C9202 /* CustomerMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerMenuTableViewController.swift; sourceTree = "<group>"; };
 		A0444F9B204AE650001C9202 /* MealListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListTableViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				A0444F9D204AFFFA001C9202 /* MealDetailsViewController.swift */,
 				A0444F9F204BAB06001C9202 /* TrayViewController.swift */,
 				A02D0AB2204CA8E7000B9A71 /* PaymentViewController.swift */,
+				A02D0AB4204F54F0000B9A71 /* OrderViewController.swift */,
 			);
 			path = FoodTaskerMobile;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A01B63F4200C9335009E4871 /* ViewController.swift in Sources */,
+				A02D0AB5204F54F0000B9A71 /* OrderViewController.swift in Sources */,
 				A0444F9E204AFFFA001C9202 /* MealDetailsViewController.swift in Sources */,
 				A0444FA0204BAB06001C9202 /* TrayViewController.swift in Sources */,
 				A0444F98204AD8D0001C9202 /* RestaurantViewController.swift in Sources */,
