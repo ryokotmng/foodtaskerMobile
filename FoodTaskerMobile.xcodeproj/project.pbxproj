@@ -25,6 +25,7 @@
 		A0444FA0204BAB06001C9202 /* TrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F9F204BAB06001C9202 /* TrayViewController.swift */; };
 		A0444FA3204BAC60001C9202 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0444FA2204BAC60001C9202 /* MapKit.framework */; };
 		A0D1DF57205023420053875B /* FBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1DF56205023420053875B /* FBManager.swift */; };
+		A0D1DF5920502C6B0053875B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1DF5820502C6B0053875B /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		A0444FA2204BAC60001C9202 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A0D1DF552050202E0053875B /* FoodTaskerMobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodTaskerMobile.entitlements; sourceTree = "<group>"; };
 		A0D1DF56205023420053875B /* FBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBManager.swift; sourceTree = "<group>"; };
+		A0D1DF5820502C6B0053875B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../../../../../Applications/LoginViewController.swift; sourceTree = "<group>"; };
 		B0907B09F6CBA8D1ED8AD53B /* Pods_FoodTaskerMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodTaskerMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10B22EA2FAE78AAC4D2E891 /* Pods-FoodTaskerMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTaskerMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodTaskerMobile/Pods-FoodTaskerMobile.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +155,7 @@
 				A02D0AB2204CA8E7000B9A71 /* PaymentViewController.swift */,
 				A02D0AB4204F54F0000B9A71 /* OrderViewController.swift */,
 				A0D1DF56205023420053875B /* FBManager.swift */,
+				A0D1DF5820502C6B0053875B /* LoginViewController.swift */,
 			);
 			path = FoodTaskerMobile;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0D1DF5920502C6B0053875B /* LoginViewController.swift in Sources */,
 				A01B63F4200C9335009E4871 /* ViewController.swift in Sources */,
 				A0D1DF57205023420053875B /* FBManager.swift in Sources */,
 				A02D0AB5204F54F0000B9A71 /* OrderViewController.swift in Sources */,
