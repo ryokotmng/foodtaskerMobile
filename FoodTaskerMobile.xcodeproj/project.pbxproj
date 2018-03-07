@@ -24,6 +24,7 @@
 		A0444F9E204AFFFA001C9202 /* MealDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F9D204AFFFA001C9202 /* MealDetailsViewController.swift */; };
 		A0444FA0204BAB06001C9202 /* TrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F9F204BAB06001C9202 /* TrayViewController.swift */; };
 		A0444FA3204BAC60001C9202 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0444FA2204BAC60001C9202 /* MapKit.framework */; };
+		A0D1DF57205023420053875B /* FBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1DF56205023420053875B /* FBManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		A0444F9D204AFFFA001C9202 /* MealDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsViewController.swift; sourceTree = "<group>"; };
 		A0444F9F204BAB06001C9202 /* TrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrayViewController.swift; sourceTree = "<group>"; };
 		A0444FA2204BAC60001C9202 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A0D1DF552050202E0053875B /* FoodTaskerMobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodTaskerMobile.entitlements; sourceTree = "<group>"; };
+		A0D1DF56205023420053875B /* FBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBManager.swift; sourceTree = "<group>"; };
 		B0907B09F6CBA8D1ED8AD53B /* Pods_FoodTaskerMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodTaskerMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10B22EA2FAE78AAC4D2E891 /* Pods-FoodTaskerMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTaskerMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodTaskerMobile/Pods-FoodTaskerMobile.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +137,7 @@
 		A01B63F0200C9335009E4871 /* FoodTaskerMobile */ = {
 			isa = PBXGroup;
 			children = (
+				A0D1DF552050202E0053875B /* FoodTaskerMobile.entitlements */,
 				A01B6423200F20B8009E4871 /* Lib */,
 				A01B63F1200C9335009E4871 /* AppDelegate.swift */,
 				A01B63F3200C9335009E4871 /* ViewController.swift */,
@@ -148,6 +152,7 @@
 				A0444F9F204BAB06001C9202 /* TrayViewController.swift */,
 				A02D0AB2204CA8E7000B9A71 /* PaymentViewController.swift */,
 				A02D0AB4204F54F0000B9A71 /* OrderViewController.swift */,
+				A0D1DF56205023420053875B /* FBManager.swift */,
 			);
 			path = FoodTaskerMobile;
 			sourceTree = "<group>";
@@ -262,6 +267,11 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					A01B6401200C9335009E4871 = {
 						CreatedOnToolsVersion = 9.2;
@@ -330,11 +340,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FoodTaskerMobile/Pods-FoodTaskerMobile-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -382,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A01B63F4200C9335009E4871 /* ViewController.swift in Sources */,
+				A0D1DF57205023420053875B /* FBManager.swift in Sources */,
 				A02D0AB5204F54F0000B9A71 /* OrderViewController.swift in Sources */,
 				A0444F9E204AFFFA001C9202 /* MealDetailsViewController.swift in Sources */,
 				A0444FA0204BAB06001C9202 /* TrayViewController.swift in Sources */,
@@ -558,6 +581,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = FoodTaskerMobile/FoodTaskerMobile.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GE5URC6KT3;
 				INFOPLIST_FILE = FoodTaskerMobile/Info.plist;
@@ -577,6 +601,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = FoodTaskerMobile/FoodTaskerMobile.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GE5URC6KT3;
 				INFOPLIST_FILE = FoodTaskerMobile/Info.plist;
