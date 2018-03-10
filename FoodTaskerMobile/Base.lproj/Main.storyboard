@@ -1008,7 +1008,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.14117647059999999" green="0.12941176469999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="iKs-v0-gJk"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="CustomerLogout" id="iKs-v0-gJk"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
