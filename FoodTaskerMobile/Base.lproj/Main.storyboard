@@ -1024,6 +1024,10 @@
                             <outlet property="delegate" destination="AzW-m1-cuT" id="w9Z-YZ-yeA"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="imgAvatar" destination="y1Q-50-cE8" id="9XO-Rh-XYa"/>
+                        <outlet property="lbName" destination="hpW-e7-KKr" id="Lr3-5c-gYI"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZ4-XD-wQ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
