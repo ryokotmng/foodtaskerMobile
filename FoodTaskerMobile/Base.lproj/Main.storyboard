@@ -58,6 +58,9 @@
                                         <state key="normal" title="USE A DIFFERENT ACCOUNT">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="facebookLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lcb-18-ifo"/>
+                                        </connections>
                                     </button>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yyc-LA-qPr">
                                         <rect key="frame" x="15" y="615" width="345" height="29"/>
@@ -105,6 +108,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bLogin" destination="qsR-OY-mvY" id="RfW-Sm-BHv"/>
+                        <outlet property="bLogout" destination="z5g-KO-kGD" id="LmQ-HT-2fZ"/>
                         <segue destination="53O-bc-JCn" kind="showDetail" identifier="CustomerView" id="RRq-Sy-P4b"/>
                     </connections>
                 </viewController>
