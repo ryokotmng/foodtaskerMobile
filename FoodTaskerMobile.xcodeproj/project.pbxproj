@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		01281C590E6AB49ECF9179D3 /* Pods_FoodTaskerMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0907B09F6CBA8D1ED8AD53B /* Pods_FoodTaskerMobile.framework */; };
 		A01B63F2200C9335009E4871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B63F1200C9335009E4871 /* AppDelegate.swift */; };
-		A01B63F4200C9335009E4871 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B63F3200C9335009E4871 /* ViewController.swift */; };
 		A01B63F7200C9335009E4871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01B63F5200C9335009E4871 /* Main.storyboard */; };
 		A01B63F9200C9335009E4871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01B63F8200C9335009E4871 /* Assets.xcassets */; };
 		A01B63FC200C9335009E4871 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01B63FA200C9335009E4871 /* LaunchScreen.storyboard */; };
@@ -25,8 +24,10 @@
 		A0444FA0204BAB06001C9202 /* TrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F9F204BAB06001C9202 /* TrayViewController.swift */; };
 		A0444FA3204BAC60001C9202 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0444FA2204BAC60001C9202 /* MapKit.framework */; };
 		A0D1DF57205023420053875B /* FBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1DF56205023420053875B /* FBManager.swift */; };
-		A0D1DF5920502C6B0053875B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1DF5820502C6B0053875B /* LoginViewController.swift */; };
 		A0D1DF5B205421D40053875B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1DF5A205421D40053875B /* User.swift */; };
+		A0D1DF61205436CB0053875B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1DF60205436CB0053875B /* LoginViewController.swift */; };
+		A0D1DF63205436E90053875B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1DF62205436E90053875B /* LoginViewController.swift */; };
+		A0D1DF67205437770053875B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1DF66205437770053875B /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +51,6 @@
 		5BDF667143B7E739BA11D9F9 /* Pods-FoodTaskerMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTaskerMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodTaskerMobile/Pods-FoodTaskerMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		A01B63EE200C9335009E4871 /* FoodTaskerMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTaskerMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01B63F1200C9335009E4871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A01B63F3200C9335009E4871 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A01B63F6200C9335009E4871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A01B63F8200C9335009E4871 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A01B63FB200C9335009E4871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,8 +74,10 @@
 		A0444FA2204BAC60001C9202 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A0D1DF552050202E0053875B /* FoodTaskerMobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodTaskerMobile.entitlements; sourceTree = "<group>"; };
 		A0D1DF56205023420053875B /* FBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBManager.swift; sourceTree = "<group>"; };
-		A0D1DF5820502C6B0053875B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../../../../../Applications/LoginViewController.swift; sourceTree = "<group>"; };
 		A0D1DF5A205421D40053875B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A0D1DF60205436CB0053875B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A0D1DF62205436E90053875B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../../../../../../Applications/LoginViewController.swift; sourceTree = "<group>"; };
+		A0D1DF66205437770053875B /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		B0907B09F6CBA8D1ED8AD53B /* Pods_FoodTaskerMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodTaskerMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10B22EA2FAE78AAC4D2E891 /* Pods-FoodTaskerMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTaskerMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodTaskerMobile/Pods-FoodTaskerMobile.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,24 +143,17 @@
 		A01B63F0200C9335009E4871 /* FoodTaskerMobile */ = {
 			isa = PBXGroup;
 			children = (
+				A0D1DF5F205436880053875B /* Manager */,
+				A0D1DF5E205436800053875B /* Controller */,
+				A0D1DF5D205436710053875B /* View */,
+				A0D1DF5C2054364F0053875B /* Model */,
 				A0D1DF552050202E0053875B /* FoodTaskerMobile.entitlements */,
 				A01B6423200F20B8009E4871 /* Lib */,
 				A01B63F1200C9335009E4871 /* AppDelegate.swift */,
-				A01B63F3200C9335009E4871 /* ViewController.swift */,
 				A01B63F5200C9335009E4871 /* Main.storyboard */,
 				A01B63F8200C9335009E4871 /* Assets.xcassets */,
 				A01B63FA200C9335009E4871 /* LaunchScreen.storyboard */,
 				A01B63FD200C9335009E4871 /* Info.plist */,
-				A0444F97204AD8D0001C9202 /* RestaurantViewController.swift */,
-				A0444F99204ADED8001C9202 /* CustomerMenuTableViewController.swift */,
-				A0444F9B204AE650001C9202 /* MealListTableViewController.swift */,
-				A0444F9D204AFFFA001C9202 /* MealDetailsViewController.swift */,
-				A0444F9F204BAB06001C9202 /* TrayViewController.swift */,
-				A02D0AB2204CA8E7000B9A71 /* PaymentViewController.swift */,
-				A02D0AB4204F54F0000B9A71 /* OrderViewController.swift */,
-				A0D1DF56205023420053875B /* FBManager.swift */,
-				A0D1DF5820502C6B0053875B /* LoginViewController.swift */,
-				A0D1DF5A205421D40053875B /* User.swift */,
 			);
 			path = FoodTaskerMobile;
 			sourceTree = "<group>";
@@ -198,6 +193,46 @@
 				B0907B09F6CBA8D1ED8AD53B /* Pods_FoodTaskerMobile.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0D1DF5C2054364F0053875B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A0D1DF5A205421D40053875B /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A0D1DF5D205436710053875B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A0D1DF5E205436800053875B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A0D1DF60205436CB0053875B /* LoginViewController.swift */,
+				A0444F97204AD8D0001C9202 /* RestaurantViewController.swift */,
+				A0444F99204ADED8001C9202 /* CustomerMenuTableViewController.swift */,
+				A0444F9B204AE650001C9202 /* MealListTableViewController.swift */,
+				A0444F9D204AFFFA001C9202 /* MealDetailsViewController.swift */,
+				A0444F9F204BAB06001C9202 /* TrayViewController.swift */,
+				A02D0AB2204CA8E7000B9A71 /* PaymentViewController.swift */,
+				A0D1DF62205436E90053875B /* LoginViewController.swift */,
+				A02D0AB4204F54F0000B9A71 /* OrderViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A0D1DF5F205436880053875B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A0D1DF56205023420053875B /* FBManager.swift */,
+				A0D1DF66205437770053875B /* APIManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,18 +444,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0D1DF63205436E90053875B /* LoginViewController.swift in Sources */,
 				A0D1DF5B205421D40053875B /* User.swift in Sources */,
-				A0D1DF5920502C6B0053875B /* LoginViewController.swift in Sources */,
-				A01B63F4200C9335009E4871 /* ViewController.swift in Sources */,
 				A0D1DF57205023420053875B /* FBManager.swift in Sources */,
 				A02D0AB5204F54F0000B9A71 /* OrderViewController.swift in Sources */,
 				A0444F9E204AFFFA001C9202 /* MealDetailsViewController.swift in Sources */,
 				A0444FA0204BAB06001C9202 /* TrayViewController.swift in Sources */,
+				A0D1DF67205437770053875B /* APIManager.swift in Sources */,
 				A0444F98204AD8D0001C9202 /* RestaurantViewController.swift in Sources */,
 				A0444F9C204AE650001C9202 /* MealListTableViewController.swift in Sources */,
 				A01B63F2200C9335009E4871 /* AppDelegate.swift in Sources */,
 				A0444F9A204ADED8001C9202 /* CustomerMenuTableViewController.swift in Sources */,
 				A02D0AB3204CA8E7000B9A71 /* PaymentViewController.swift in Sources */,
+				A0D1DF61205436CB0053875B /* LoginViewController.swift in Sources */,
 				A01B6422200F209D009E4871 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
