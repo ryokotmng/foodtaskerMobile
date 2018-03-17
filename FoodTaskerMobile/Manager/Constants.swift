@@ -7,11 +7,11 @@
 //
 
 import Foundation
+import Keys
 
 let BASE_URL: String = "http://localhost:8000"
-let CLIENT_ID: String = ""
-let CLIENT_SECRET: String = ""
+let CLIENT_ID: String = " TBuXAaAUxyTPyF3FAKN5Fuf25nZdAXf95aBG9kXI"
+let CLIENT_SECRET: String = FoodTaskerMobileXcodeprojKeys().clientSecret
 
 let USERTYPE_CUSTOMER = "customer"
 let USERTYPE_DRIVER = "driver"
-
