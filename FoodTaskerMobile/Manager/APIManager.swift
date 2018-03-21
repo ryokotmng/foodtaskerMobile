@@ -23,10 +23,10 @@ class APIManager {
     // APIs to login and out
     func login(userType: String, completionHandler: @escaping (NSError?) -> Void) {
         
-        let path = "api/social/convert-token"
+        let path = "api/social/convert-token/"
         let url = baseURL!.appendingPathComponent(path)
-        let params: [String : Any] = [
-            "grant_type": "convert-token",
+        let params: [String: Any] = [
+            "grant_type": "convert_token",
             "client_id": CLIENT_ID,
             "client_secret": CLIENT_SECRET,
             "backend": "facebook",
@@ -34,7 +34,7 @@ class APIManager {
             "user_type": userType
         ]
         
-        Alamofire.request(url!, method: .post, parameters: params, encoding: URLEncoding(), headers: nil).responseJSON{ (response) in
+        Alamofire.request(url!, method: .post, parameters: params, encoding: URLEncoding(), headers: nil).responseJSON { (response) in
             
             switch response.result {
             case .success(let value):
@@ -56,7 +56,7 @@ class APIManager {
     }
     func logout(completionHandler: @escaping (NSError?) -> Void) {
         
-        let path = "api/social/revoke-token"
+        let path = "api/social/revoke-token/"
         let url = baseURL!.appendingPathComponent(path)
         let params: [String: Any] = [
             "client_id": CLIENT_ID,

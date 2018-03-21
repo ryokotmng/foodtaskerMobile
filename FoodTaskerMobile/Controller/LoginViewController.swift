@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var bLogout: UIButton!
     
     var fbLoginSuccess = false
+    var userType: String = USERTYPE_CUSTOMER
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,8 @@ class LoginViewController: UIViewController {
                 self.bLogin.setTitle("Continue as \(User.currentUser.email!)", for: .normal)
                 // self.bLogin.sizeToFit()
             })
+        } else {
+            self.bLogout.isHidden = true
         }
     }
 
@@ -38,17 +41,30 @@ class LoginViewController: UIViewController {
     
     @IBAction func facebookLogout(_ sender: Any) {
         
-        FBManager.shared.logOut()
-        User.currentUser.resetInfo()
-        
-        bLogout.isHidden = true
-        bLogin.setTitle("Login with Facebook", for: .normal)
+        APIManager.shared.logout { (error) in
+            
+            if error == nil {
+                FBManager.shared.logOut()
+                User.currentUser.resetInfo()
+                
+                self.bLogout.isHidden = true
+                self.bLogin.setTitle("Login with Facebook", for: .normal)
+            }
+        }
     }
     
     @IBAction func facebookLogin(_ sender: Any) {
+        
         if (FBSDKAccessToken.current() != nil) {
-            fbLoginSuccess = true
-            self.viewDidAppear(true)
+            
+            APIManager.shared.login(userType: userType, completionHandler: { (error) in
+                if error == nil {
+                    self.fbLoginSuccess = true
+                    self.viewDidAppear(true)
+                }
+            })
+
+            
         } else {
             FBManager.shared.logIn(
                 withReadPermissions: ["public_profile", "email"],
@@ -57,8 +73,12 @@ class LoginViewController: UIViewController {
                     if (error == nil) {
                         
                         FBManager.getFBUserData(completionHandler: {
-                            self.fbLoginSuccess = true
-                            self.viewDidAppear(true)
+                            APIManager.shared.login(userType: self.userType, completionHandler: { (error) in
+                                if error == nil {
+                                    self.fbLoginSuccess = true
+                                    self.viewDidAppear(true)
+                                }
+                            })
                         })
                     }
                 }
