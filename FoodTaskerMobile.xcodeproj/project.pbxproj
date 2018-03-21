@@ -15,6 +15,7 @@
 		A01B6407200C9335009E4871 /* FoodTaskerMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B6406200C9335009E4871 /* FoodTaskerMobileTests.swift */; };
 		A01B6412200C9335009E4871 /* FoodTaskerMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B6411200C9335009E4871 /* FoodTaskerMobileUITests.swift */; };
 		A01B6422200F209D009E4871 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01B6421200F209D009E4871 /* SWRevealViewController.m */; };
+		A02AE23F20628E3B00DDC05C /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02AE23E20628E3B00DDC05C /* Restaurant.swift */; };
 		A02D0AB3204CA8E7000B9A71 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D0AB2204CA8E7000B9A71 /* PaymentViewController.swift */; };
 		A02D0AB5204F54F0000B9A71 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D0AB4204F54F0000B9A71 /* OrderViewController.swift */; };
 		A0444F98204AD8D0001C9202 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F97204AD8D0001C9202 /* RestaurantViewController.swift */; };
@@ -64,6 +65,7 @@
 		A01B641F200F209C009E4871 /* FoodTaskerMobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodTaskerMobile-Bridging-Header.h"; sourceTree = "<group>"; };
 		A01B6420200F209C009E4871 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		A01B6421200F209D009E4871 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		A02AE23E20628E3B00DDC05C /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		A02D0AB2204CA8E7000B9A71 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		A02D0AB4204F54F0000B9A71 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		A0444F97204AD8D0001C9202 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				A0D1DF5A205421D40053875B /* User.swift */,
+				A02AE23E20628E3B00DDC05C /* Restaurant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				A02D0AB5204F54F0000B9A71 /* OrderViewController.swift in Sources */,
 				A0444F9E204AFFFA001C9202 /* MealDetailsViewController.swift in Sources */,
 				A0D1DF69205552550053875B /* Constants.swift in Sources */,
+				A02AE23F20628E3B00DDC05C /* Restaurant.swift in Sources */,
 				A0444FA0204BAB06001C9202 /* TrayViewController.swift in Sources */,
 				A0D1DF67205437770053875B /* APIManager.swift in Sources */,
 				A0444F98204AD8D0001C9202 /* RestaurantViewController.swift in Sources */,
