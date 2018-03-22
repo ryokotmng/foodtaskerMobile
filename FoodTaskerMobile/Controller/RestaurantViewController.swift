@@ -12,11 +12,13 @@ class RestaurantViewController: UIViewController {
 
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
     @IBOutlet weak var searchRestaurant: UISearchBar!
+    @IBOutlet weak var tbvRestaurant: UITableView!
     
     var restaurants = [Restaurant]()
     var filterRestaurants = [Restaurant]()
-    @IBOutlet weak var tbvRestaurant: UITableView!
     
+    let activityIndicator = UIActivityIndicatorView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +32,9 @@ class RestaurantViewController: UIViewController {
     }
     
     func loadRestaurants() {
+        
+        showActivityIndicator()
+        
         APIManager.shared.getRestaurants { (json) in
             if json != nil {
                 
@@ -42,6 +47,7 @@ class RestaurantViewController: UIViewController {
                     }
                     
                     self.tbvRestaurant.reloadData()
+                    self.hideActivityIndicator()
                 }
             }
         }
@@ -57,6 +63,22 @@ class RestaurantViewController: UIViewController {
                 imageView.image = UIImage(data: data)
             })
         }.resume()
+    }
+    
+    func showActivityIndicator() {
+        
+        activityIndicator.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0)
+        activityIndicator.center = view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+        activityIndicator.color = UIColor.white
+        
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+    }
+    
+    func hideActivityIndicator() {
+        activityIndicator.stopAnimating()
     }
 }
 
