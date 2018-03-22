@@ -9,9 +9,15 @@
 import UIKit
 
 class MealListTableViewController: UITableViewController {
-
+    
+    var restaurant: Restaurant?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let restaurantName = restaurant?.name {
+            self.navigationItem.title = restaurantName
+        }
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
