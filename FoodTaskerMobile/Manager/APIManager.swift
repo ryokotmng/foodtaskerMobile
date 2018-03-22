@@ -107,15 +107,15 @@ class APIManager {
             completionHandler()
         }
     }
-
-    // APIs getting Restaurant list
-    func getRestaurants(completionHandler: @escaping (JSON) -> Void) {
+    
+    // Request server function
+    func requestServer(_ method: HTTPMethod,_ path: String,_ params: [String: Any]?,_ encoding: ParameterEncoding,_ completionHandler: @escaping (JSON) -> Void ) {
         
-        let path = "api/customer/restaurants/"
         let url = baseURL?.appendingPathComponent(path)
         
         refreshTokenIfNeeded {
-            Alamofire.request(url!, method: .get, parameters: nil, encoding: URLEncoding(), headers: nil).responseJSON(completionHandler: { (response) in
+            
+            Alamofire.request(url!, method: method, parameters: params, encoding: encoding, headers: nil).responseJSON{ response in
                 
                 switch response.result {
                 case .success(let value):
@@ -127,7 +127,21 @@ class APIManager {
                     completionHandler(nil)
                     break
                 }
-            })
+            }
         }
+    }
+
+    // APIs getting Restaurant list
+    func getRestaurants(completionHandler: @escaping (JSON) -> Void) {
+        
+        let path = "api/customer/restaurants/"
+        requestServer(.get, path, nil, URLEncoding(), completionHandler)
+    }
+    
+    // API - Getting list of meals of a reataurant
+    func getMeals(restaurantId: Int, completionHandler: @escaping (JSON) -> Void) {
+        
+        let path = "api/customer/meals/\(restaurantId)"
+        requestServer(.get, path, nil, URLEncoding(), completionHandler)
     }
 }
