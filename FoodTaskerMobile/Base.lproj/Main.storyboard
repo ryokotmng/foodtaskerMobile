@@ -148,6 +148,9 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="56"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="AeO-l1-MGE" id="Wgd-oB-20U"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="226" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gLu-fa-YNg">
                                 <rect key="frame" x="0.0" y="144" width="375" height="634"/>
@@ -240,6 +243,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBarButton" destination="jCk-Av-2Vg" id="k9J-Eg-6Cf"/>
+                        <outlet property="searchRestaurant" destination="J1g-jc-jpL" id="Ryc-sJ-6oN"/>
                         <outlet property="tbvRestaurant" destination="gLu-fa-YNg" id="8bC-f7-i3R"/>
                     </connections>
                 </viewController>

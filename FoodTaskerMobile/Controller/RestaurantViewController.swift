@@ -11,6 +11,7 @@ import UIKit
 class RestaurantViewController: UIViewController {
 
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
+    @IBOutlet weak var searchRestaurant: UISearchBar!
     
     var restaurants = [Restaurant]()
     var filterRestaurants = [Restaurant]()
@@ -59,18 +60,42 @@ class RestaurantViewController: UIViewController {
     }
 }
 
+extension RestaurantViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filterRestaurants = self.restaurants.filter({ (res: restaurant) -> Bool in
+            
+            return res.name?.lowercased().range(of: searchText.lowercased()) != nil
+        })
+        
+        self.tbvRestaurant.reloadData()
+    }
+}
+
 extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if searchRestaurant.text != "" {
+            return self.restaurants.count
+        }
         return self.restaurants.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell", for: indexPath) as! RestaurantViewCell
         
         let restaurant: Restaurant
-        restaurant = restaurants[indexPath.row]
+        
+        let searchRestaurant: Restaurant
+        
+        if searchRestaurant.text != "" {
+            restaurant = filterRestaurants[indexPath.row]
+        } else {
+            restaurant = restaurants[indexPath.row]
+        }
         
         cell.lbRestaurantName.text = restaurant.name!
         cell.lbRestaurantAddress.text = restaurant.address!
