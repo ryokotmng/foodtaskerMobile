@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    @IBAction func facebookLogout(_ sender: Any) {
+    @IBAction func facebookLogout(_ sender: AnyObject) {
         
         APIManager.shared.logout { (error) in
             
@@ -53,7 +53,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    @IBAction func facebookLogin(_ sender: Any) {
+    @IBAction func facebookLogin(_ sender: AnyObject) {
         
         if (FBSDKAccessToken.current() != nil) {
             
@@ -63,13 +63,14 @@ class LoginViewController: UIViewController {
                     self.viewDidAppear(true)
                 }
             })
-
             
         } else {
+            
             FBManager.shared.logIn(
                 withReadPermissions: ["public_profile", "email"],
                 from: self,
                 handler: { (result, error) in
+                    
                     if (error == nil) {
                         
                         FBManager.getFBUserData(completionHandler: {
@@ -81,9 +82,7 @@ class LoginViewController: UIViewController {
                             })
                         })
                     }
-                }
-            )
+            })
         }
     }
-    
 }
