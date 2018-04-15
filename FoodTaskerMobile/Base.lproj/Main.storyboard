@@ -346,7 +346,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank_image" translatesAutoresizingMaskIntoConstraints="NO" id="Ma1-ua-eT3">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank_image" translatesAutoresizingMaskIntoConstraints="NO" id="Ma1-ua-eT3">
                                 <rect key="frame" x="0.0" y="88" width="375" height="320"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="320" id="fWu-p4-ujZ"/>
@@ -472,6 +472,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imgMeal" destination="Ma1-ua-eT3" id="vPT-Gg-RWq"/>
+                        <outlet property="lbMealName" destination="rfB-YQ-cCv" id="tVX-uM-SuQ"/>
+                        <outlet property="lbMealShortDescription" destination="i49-El-5fn" id="OQi-VW-Zwv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJr-eW-M5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

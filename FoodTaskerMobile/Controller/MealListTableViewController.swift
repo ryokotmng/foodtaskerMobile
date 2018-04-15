@@ -52,6 +52,13 @@ class MealListTableViewController: UITableViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MealDetails" {
+            let controller = segue.destination as! MealDetailsViewController
+            controller.meal = meals[(tableView.indexPathForSelectedRow?.row)!]
+        }
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
