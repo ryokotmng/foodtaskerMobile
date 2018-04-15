@@ -386,6 +386,9 @@
                                         <state key="normal" title="ADD TO TRAY">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addToTray:" destination="8RF-sK-oD7" eventType="touchUpInside" id="mW9-Hx-ugF"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukc-1m-kyr">
                                         <rect key="frame" x="307" y="55" width="56" height="21"/>
@@ -416,6 +419,9 @@
                                         <state key="normal" title="+">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addQty:" destination="8RF-sK-oD7" eventType="touchUpInside" id="qRE-yi-HfW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7KC-o9-bjg">
                                         <rect key="frame" x="337" y="5" width="30" height="30"/>
@@ -476,6 +482,8 @@
                         <outlet property="imgMeal" destination="Ma1-ua-eT3" id="vPT-Gg-RWq"/>
                         <outlet property="lbMealName" destination="rfB-YQ-cCv" id="tVX-uM-SuQ"/>
                         <outlet property="lbMealShortDescription" destination="i49-El-5fn" id="OQi-VW-Zwv"/>
+                        <outlet property="lbQty" destination="8Vm-Av-Qpl" id="A7j-Tj-3Wv"/>
+                        <outlet property="lbTotal" destination="ukc-1m-kyr" id="8nv-bp-WkS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJr-eW-M5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
