@@ -13,7 +13,7 @@ class Meal {
     
     var id: Int?
     var name: String?
-    var short_discription: String?
+    var short_description: String?
     var image: String?
     var price: Float?
     
@@ -21,7 +21,7 @@ class Meal {
         
         self.id = json["id"].int
         self.name = json["name"].string
-        self.short_discription = json["short_discription"].string
+        self.short_description = json["short_description"].string
         self.image = json["image"].string
         self.price = json["price"].float
     }
