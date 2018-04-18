@@ -56,6 +56,7 @@ class MealListTableViewController: UITableViewController {
         if segue.identifier == "MealDetails" {
             let controller = segue.destination as! MealDetailsViewController
             controller.meal = meals[(tableView.indexPathForSelectedRow?.row)!]
+            controller.restaurant = restaurant
         }
     }
     
