@@ -498,7 +498,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MP7-hf-nqP">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MP7-hf-nqP">
                                 <rect key="frame" x="0.0" y="88" width="375" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -556,7 +556,7 @@
                                     <outlet property="delegate" destination="5iO-t1-CHH" id="cAn-Et-0AU"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="970-V2-fqY">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="970-V2-fqY">
                                 <rect key="frame" x="0.0" y="288" width="375" height="60"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RbG-FJ-6u9">
@@ -597,7 +597,7 @@
                                     <constraint firstItem="wtm-dE-h9k" firstAttribute="leading" secondItem="970-V2-fqY" secondAttribute="leading" constant="20" id="tAv-0F-ww9"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76n-QK-FS2">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76n-QK-FS2">
                                 <rect key="frame" x="0.0" y="348" width="375" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNJ-Qp-zpn">
@@ -626,7 +626,7 @@
                                     <constraint firstItem="bNJ-Qp-zpn" firstAttribute="leading" secondItem="76n-QK-FS2" secondAttribute="leading" constant="20" id="wrW-uG-M3C"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNg-oc-77N">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNg-oc-77N">
                                 <rect key="frame" x="8" y="720" width="359" height="50"/>
                                 <color key="backgroundColor" red="0.30588235289999999" green="0.69019607839999997" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -641,7 +641,7 @@
                                     <segue destination="QFS-Yn-tdV" kind="show" id="suT-0G-QgA"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3h2-Sv-uld">
+                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3h2-Sv-uld">
                                 <rect key="frame" x="5" y="413" width="365" height="300"/>
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="t4x-8h-efz">
@@ -686,7 +686,15 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="icon_menu_24dp" id="2Of-gw-3XJ"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bAddPayment" destination="VNg-oc-77N" id="Yf2-YN-Bck"/>
+                        <outlet property="lbTotal" destination="vgD-dl-XYw" id="Nmt-f5-dOp"/>
+                        <outlet property="map" destination="t4x-8h-efz" id="2AK-HX-yS4"/>
                         <outlet property="menuBarButton" destination="2Of-gw-3XJ" id="Hwf-FY-5v2"/>
+                        <outlet property="tbAddress" destination="f1W-Pn-Mby" id="ar7-Yv-E4X"/>
+                        <outlet property="tbvMeals" destination="MP7-hf-nqP" id="a0R-fx-U1Z"/>
+                        <outlet property="viewAddress" destination="76n-QK-FS2" id="UYq-lg-loV"/>
+                        <outlet property="viewMap" destination="3h2-Sv-uld" id="fss-Ud-CV4"/>
+                        <outlet property="viewTotal" destination="970-V2-fqY" id="x5q-xi-XzS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNc-gD-n8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
