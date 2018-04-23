@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class TrayViewController: UIViewController {
 
@@ -22,6 +23,7 @@ class TrayViewController: UIViewController {
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var bAddPayment: UIButton!
     
+    var locationManager: CLLocationManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +56,18 @@ class TrayViewController: UIViewController {
             
             loadMeals()
         }
+        
+        // Show current user's location
+        if CLLocationManager.locationServicesEnabled() {
+
+            locationManager = CLLocationManager()
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startUpdatingLocation()
+
+            self.map.showsUserLocation = true
+        }
     }
     
     func loadMeals() {
@@ -62,10 +76,10 @@ class TrayViewController: UIViewController {
     }
     
     @IBAction func addPayment(_ sender: Any) {
-        
+
         if tbAddress.text == "" {
             // Showing alert that this field is required.
-            
+
             let alertController = UIAlertController(title: "No Address", message: "Address is required", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
@@ -76,10 +90,26 @@ class TrayViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
             
         } else {
-            
+
             Tray.currentTray.address = tbAddress.text
             self.performSegue(withIdentifier: "AddPayment", sender: self)
         }
+    }
+}
+
+extension TrayViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let location = locations.last! as CLLocation
+
+        let center = CLLocationCoordinate2D(
+            latitude: location.coordinate.latitude,
+            longitude: location.coordinate.longitude)
+        
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+
+        self.map.setRegion(region, animated: true)
     }
 }
 
