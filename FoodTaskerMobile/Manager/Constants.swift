@@ -15,3 +15,5 @@ let CLIENT_SECRET: String = FoodTaskerMobileXcodeprojKeys().clientSecret
 
 let USERTYPE_CUSTOMER = "customer"
 let USERTYPE_DRIVER = "driver"
+
+let STRIPE_PUBLIC_KEY = "pk_test_w8OEQMBbbvwHKVDvzH3dRaVz"
