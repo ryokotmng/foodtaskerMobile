@@ -131,3 +131,41 @@ extension TrayViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 }
+
+extension TrayViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        let address = textField.text
+        let geocoder = CLGeocoder()
+        Tray.currentTray.address = address
+        
+        geocoder.geocodeAddressString(address!) { (placemarks, error) in
+            
+            if (error != nil) {
+                print("Error: ", error)
+            }
+            
+            if let placemark = placemarks?.first {
+                
+                let coordinates: CLLocationCoordinate2D = placemark.location!.coordinate
+                
+                let region = MKCoordinateRegion(
+                    center: coordinates,
+                    span: MKCoordinateSpanMake(0.01, 0.01)
+                )
+                
+                self.map.setRegion(region, animated: true)
+                self.locationManager.stopUpdatingLocation()
+                
+                // Create a pin
+                let dropPin = MKPointAnnotation()
+                dropPin.coordinate = coordinates
+                
+                self.map.addAnnotation(dropPin)
+            }
+        }
+        
+        return true
+    }
+}
