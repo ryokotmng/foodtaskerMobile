@@ -8,13 +8,19 @@
 
 import UIKit
 import SwiftyJSON
+import MapKit
 
 class OrderViewController: UIViewController {
 
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
     @IBOutlet weak var tbvMeals: UITableView!
+    @IBOutlet weak var map: MKMapView!
+    @IBOutlet weak var lbStatus: UILabel!
     
     var tray = [JSON]()
+    
+    var destination: MKPlacemark?
+    var source: MKPlacemark?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +41,65 @@ class OrderViewController: UIViewController {
             
             print(json)
             
-            if let orderDetails = json["order"]["order_details"].array {
+            let order = json["order"]
+            
+            if let orderDetails = order["order_details"].array {
+                
+                self.lbStatus.text = order["status"].string!.uppercased()
                 self.tray = orderDetails
                 self.tbvMeals.reloadData()
+            }
+            
+            let from = order["restaurant"]["address"].string!
+            let to = order["address"].string!
+            
+            self.getLocation(from, "Restaurant", { (sou) in
+                self.source = sou
+                
+                self.getLocation(to, "Customer", { (des) in
+                    self.destination = des
+                })
+            })
+        }
+    }
+}
+
+extension OrderViewController: MKMapViewDelegate {
+    
+    
+    // #1 - Delegate method of MKMapViewDelegate
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor = UIColor.blue
+        renderer.lineWidth = 5.0
+        
+        return renderer
+    }
+    
+    // #2 - Convert an address string to a location on the map
+    func getLocation(_ address: String,_ title: String,_ completionHandler: @escaping (MKPlacemark) -> Void) {
+        
+        let geocoder = CLGeocoder()
+        
+        geocoder.geocodeAddressString(address) { (placemarks, error) in
+            
+            if (error != nil) {
+                print("Error: ", error)
+            }
+            
+            if let placemark = placemarks?.first {
+                
+                let coordinates: CLLocationCoordinate2D = placemark.location!.coordinate
+                
+                // Create a pin
+                let dropPin = MKPointAnnotation()
+                dropPin.coordinate = coordinates
+                dropPin.title = title
+                
+                self.map.addAnnotation(dropPin)
+                completionHandler(MKPlacemark.init(placemark: placemark))
             }
         }
     }

@@ -841,6 +841,9 @@
                             </tableView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ik1-au-Rdd">
                                 <rect key="frame" x="0.0" y="88" width="375" height="540"/>
+                                <connections>
+                                    <outlet property="delegate" destination="oJa-t7-mau" id="nXs-Su-Fva"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -870,6 +873,8 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="icon_menu_24dp" id="hmU-AC-ang"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="lbStatus" destination="q8Q-1H-rK7" id="y6k-yn-eux"/>
+                        <outlet property="map" destination="ik1-au-Rdd" id="Ddg-PX-0Hu"/>
                         <outlet property="menuBarButton" destination="hmU-AC-ang" id="t2c-CE-tpT"/>
                         <outlet property="tbvMeal" destination="ZKS-S4-BxJ" id="hw9-Pv-JIo"/>
                     </connections>
