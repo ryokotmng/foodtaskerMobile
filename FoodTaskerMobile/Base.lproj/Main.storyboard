@@ -785,7 +785,7 @@
                                     <constraint firstAttribute="height" constant="100" id="7bk-Ad-8qJ"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderItemCell" id="1SZ-W9-tBz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderItemCell" id="1SZ-W9-tBz" customClass="OrderViewCell" customModule="FoodTaskerMobile" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1SZ-W9-tBz" id="wa4-fT-L7o">
@@ -827,6 +827,11 @@
                                                 <constraint firstItem="EP1-OV-3sY" firstAttribute="centerY" secondItem="wa4-fT-L7o" secondAttribute="centerY" id="oBV-S3-86z"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lbMealName" destination="Tvi-lN-CPe" id="Uri-ni-ws5"/>
+                                            <outlet property="lbQty" destination="EP1-OV-3sY" id="uC9-PT-raz"/>
+                                            <outlet property="lbSubTotal" destination="Zg9-b2-trm" id="FBa-ds-7bG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -866,6 +871,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBarButton" destination="hmU-AC-ang" id="t2c-CE-tpT"/>
+                        <outlet property="tbvMeal" destination="ZKS-S4-BxJ" id="hw9-Pv-JIo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSj-qm-Qyz" userLabel="First Responder" sceneMemberID="firstResponder"/>

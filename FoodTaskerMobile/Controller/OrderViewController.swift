@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class OrderViewController: UIViewController {
 
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
+    @IBOutlet weak var tbvMeals: UITableView!
+    
+    var tray = [JSON]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +24,21 @@ class OrderViewController: UIViewController {
             menuBarButton.action = #selector
                 (SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        
+        getLatestOrder()
+    }
+    
+    func getLatestOrder() {
+        
+        APIManager.shared.getLatestOrder { (json) in
+            
+            print(json)
+            
+            if let orderDetails = json["order"]["order_details"].array {
+                self.tray = orderDetails
+                self.tbvMeals.reloadData()
+            }
         }
     }
 }
