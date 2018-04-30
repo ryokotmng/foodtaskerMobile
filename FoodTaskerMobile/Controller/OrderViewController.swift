@@ -58,6 +58,7 @@ class OrderViewController: UIViewController {
                 
                 self.getLocation(to, "Customer", { (des) in
                     self.destination = des
+                    self.getDirections()
                 })
             })
         }
@@ -102,6 +103,46 @@ extension OrderViewController: MKMapViewDelegate {
                 completionHandler(MKPlacemark.init(placemark: placemark))
             }
         }
+    }
+    // #3 - Get direction and zoom to address
+    func getDirections() {
+        
+        let request = MKDirectionsRequest()
+        request.source = MKMapItem.init(placemark: source!)
+        request.destination = MKMapItem.init(placemark: destination!)
+        request.requestsAlternateRoutes = false
+        
+        let directions = MKDirections(request: request)
+        directions.calculate { (response, error) in
+            
+            if error != nil {
+                print("Error: ", error)
+            } else {
+                self.showRoute(response: response!)
+            }
+        }
+        
+    }
+    
+    // #4 - Show route between locations and make a visible zoom
+    func showRoute(response: MKDirectionsResponse) {
+        
+        for route in response.routes {
+            self.map.add(route.polyline, level: MKOverlayLevel.aboveRoads)
+        }
+        
+        var zoomRect = MKMapRectNull
+        for annotation in self.map.annotations {
+            let annotationPoint = MKMapPointForCoordinate(annotation.coordinate)
+            let pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0.1, 0.1)
+            zoomRect = MKMapRectUnion(zoomRect, pointRect)
+        }
+        
+        let insetWidth = -zoomRect.size.width * 0.2
+        let insetHeight = -zoomRect.size.height * 0.2
+        let insetRect = MKMapRectInset(zoomRect, insetWidth, insetHeight)
+        
+        self.map.setVisibleMapRect(insetRect, animated: true)
     }
 }
 
