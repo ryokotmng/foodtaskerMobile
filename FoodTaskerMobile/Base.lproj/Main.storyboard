@@ -111,6 +111,7 @@
                         <outlet property="bLogin" destination="qsR-OY-mvY" id="RfW-Sm-BHv"/>
                         <outlet property="bLogout" destination="z5g-KO-kGD" id="LmQ-HT-2fZ"/>
                         <segue destination="53O-bc-JCn" kind="showDetail" identifier="CustomerView" id="RRq-Sy-P4b"/>
+                        <segue destination="D2s-gI-zZC" kind="showDetail" identifier="DriverView" id="xQo-9I-fTY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
