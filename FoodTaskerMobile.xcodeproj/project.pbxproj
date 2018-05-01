@@ -25,6 +25,7 @@
 		A03CB693208DB41000DCDFCC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A03CB692208DB41000DCDFCC /* CoreLocation.framework */; };
 		A03CB6952096AC7400DCDFCC /* OrderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03CB6942096AC7400DCDFCC /* OrderViewCell.swift */; };
 		A03CB6972097F17900DCDFCC /* DriverOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03CB6962097F17800DCDFCC /* DriverOrdersViewController.swift */; };
+		A03CB6A02097FF9000DCDFCC /* DriverMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03CB69F2097FF9000DCDFCC /* DriverMenuViewController.swift */; };
 		A0444F98204AD8D0001C9202 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F97204AD8D0001C9202 /* RestaurantViewController.swift */; };
 		A0444F9A204ADED8001C9202 /* CustomerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F99204ADED8001C9202 /* CustomerMenuTableViewController.swift */; };
 		A0444F9C204AE650001C9202 /* MealListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F9B204AE650001C9202 /* MealListTableViewController.swift */; };
@@ -84,6 +85,7 @@
 		A03CB692208DB41000DCDFCC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A03CB6942096AC7400DCDFCC /* OrderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewCell.swift; sourceTree = "<group>"; };
 		A03CB6962097F17800DCDFCC /* DriverOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverOrdersViewController.swift; sourceTree = "<group>"; };
+		A03CB69F2097FF9000DCDFCC /* DriverMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverMenuViewController.swift; sourceTree = "<group>"; };
 		A0444F97204AD8D0001C9202 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		A0444F99204ADED8001C9202 /* CustomerMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerMenuTableViewController.swift; sourceTree = "<group>"; };
 		A0444F9B204AE650001C9202 /* MealListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListTableViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				A03CB6962097F17800DCDFCC /* DriverOrdersViewController.swift */,
+				A03CB69F2097FF9000DCDFCC /* DriverMenuViewController.swift */,
 			);
 			path = Driver;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				A0F1828A2063F953000CE414 /* Meal.swift in Sources */,
 				A03CB68F20878E6200DCDFCC /* Tray.swift in Sources */,
 				A0444F9E204AFFFA001C9202 /* MealDetailsViewController.swift in Sources */,
+				A03CB6A02097FF9000DCDFCC /* DriverMenuViewController.swift in Sources */,
 				A0D1DF69205552550053875B /* Constants.swift in Sources */,
 				A02AE23F20628E3B00DDC05C /* Restaurant.swift in Sources */,
 				A0444FA0204BAB06001C9202 /* TrayViewController.swift in Sources */,

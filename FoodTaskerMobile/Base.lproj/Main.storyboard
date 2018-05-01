@@ -70,6 +70,9 @@
                                             <segment title="Driver"/>
                                         </segments>
                                         <color key="tintColor" red="0.90980392160000001" green="0.2470588235" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="switchAccount:" destination="BYZ-38-t0r" eventType="valueChanged" id="2Ox-kK-muR"/>
+                                        </connections>
                                     </segmentedControl>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_screen" translatesAutoresizingMaskIntoConstraints="NO" id="e0C-FC-KSU">
                                         <rect key="frame" x="107" y="485" width="160" height="85"/>
@@ -110,6 +113,7 @@
                     <connections>
                         <outlet property="bLogin" destination="qsR-OY-mvY" id="RfW-Sm-BHv"/>
                         <outlet property="bLogout" destination="z5g-KO-kGD" id="LmQ-HT-2fZ"/>
+                        <outlet property="switchUser" destination="yyc-LA-qPr" id="V1i-aq-84K"/>
                         <segue destination="53O-bc-JCn" kind="showDetail" identifier="CustomerView" id="RRq-Sy-P4b"/>
                         <segue destination="D2s-gI-zZC" kind="showDetail" identifier="DriverView" id="xQo-9I-fTY"/>
                     </connections>
@@ -1195,10 +1199,10 @@
             </objects>
             <point key="canvasLocation" x="5068" y="799.50738916256159"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Driver Menu View Controller-->
         <scene sceneID="qOE-Dp-IDJ">
             <objects>
-                <tableViewController id="Vws-1Q-yTx" sceneMemberID="viewController">
+                <tableViewController id="Vws-1Q-yTx" customClass="DriverMenuViewController" customModule="FoodTaskerMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uEF-fH-hBu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1384,6 +1388,10 @@
                             <outlet property="delegate" destination="Vws-1Q-yTx" id="nyT-dR-1VQ"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="imgAvatar" destination="xHk-Vx-pOX" id="bUr-M0-fne"/>
+                        <outlet property="lbName" destination="qmi-l0-CrJ" id="xw7-KT-b68"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pvC-Lp-5ol" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1421,7 +1429,7 @@
         <image name="splash_screen" width="185" height="110"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3Z1-MS-Pph"/>
+        <segue reference="gpp-ND-L40"/>
         <segue reference="8jx-VD-96h"/>
         <segue reference="cmR-u4-9YV"/>
         <segue reference="TKD-8z-DBv"/>
