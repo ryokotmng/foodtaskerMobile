@@ -326,6 +326,39 @@
             </objects>
             <point key="canvasLocation" x="-423.19999999999999" y="1690.6403940886701"/>
         </scene>
+        <!--Statistic View Controller-->
+        <scene sceneID="1DV-8w-7d9">
+            <objects>
+                <viewController id="mTF-if-Dgb" customClass="StatisticViewController" customModule="FoodTaskerMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XvN-wk-aN5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmD-wK-Uh4">
+                                <rect key="frame" x="10" y="118" width="355" height="570"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eC8-uK-9bv" firstAttribute="trailing" secondItem="tmD-wK-Uh4" secondAttribute="trailing" constant="10" id="9lb-ra-BhP"/>
+                            <constraint firstItem="tmD-wK-Uh4" firstAttribute="leading" secondItem="eC8-uK-9bv" secondAttribute="leading" constant="10" id="Bev-gz-nH0"/>
+                            <constraint firstItem="eC8-uK-9bv" firstAttribute="bottom" secondItem="tmD-wK-Uh4" secondAttribute="bottom" constant="90" id="EVG-o1-9Yh"/>
+                            <constraint firstItem="tmD-wK-Uh4" firstAttribute="top" secondItem="eC8-uK-9bv" secondAttribute="top" constant="30" id="vSc-cG-hNM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eC8-uK-9bv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="L1Q-6f-pxS">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="icon_menu_24dp" id="X8H-QG-mXv"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuBarButton" destination="X8H-QG-mXv" id="rfB-JX-TCX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OKg-1e-vzN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="330" y="1691"/>
+        </scene>
         <!--Reveal View Controller-->
         <scene sceneID="Q21-a1-JUF">
             <objects>
@@ -458,7 +491,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VGg-MC-qT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1482.4000000000001" y="1552.4630541871923"/>
+            <point key="canvasLocation" x="1824.8" y="1552.4630541871923"/>
         </scene>
         <!--Meal List Table View Controller-->
         <scene sceneID="mtf-PG-DPc">
@@ -545,7 +578,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lN7-H9-9U3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2224.8000000000002" y="1550.9852216748768"/>
+            <point key="canvasLocation" x="2567.1999999999998" y="1550.9852216748768"/>
         </scene>
         <!--Meal Details View Controller-->
         <scene sceneID="u80-9c-OYM">
@@ -697,7 +730,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJr-eW-M5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2954.4000000000001" y="1550.9852216748768"/>
+            <point key="canvasLocation" x="3296.8000000000002" y="1550.9852216748768"/>
         </scene>
         <!--Tray View Controller-->
         <scene sceneID="Yqa-Yt-Zb9">
@@ -917,7 +950,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNc-gD-n8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3653.5999999999999" y="1550.9852216748768"/>
+            <point key="canvasLocation" x="3996" y="1550.9852216748768"/>
         </scene>
         <!--Payment View Controller-->
         <scene sceneID="HlA-sk-ELr">
@@ -967,7 +1000,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V52-ux-2hS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4616.8000000000002" y="1547.2906403940888"/>
+            <point key="canvasLocation" x="4959.1999999999998" y="1547.2906403940888"/>
         </scene>
         <!--Order View Controller-->
         <scene sceneID="4nJ-4Z-d9U">
@@ -1090,7 +1123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSj-qm-Qyz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5410.3999999999996" y="1551.7241379310346"/>
+            <point key="canvasLocation" x="5752.8000000000002" y="1551.7241379310346"/>
         </scene>
         <!--Customer Menu Table View Controller-->
         <scene sceneID="ah9-pU-nNA">
@@ -1496,6 +1529,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.14117647059999999" green="0.12941176469999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="Xr2-Gn-Dej" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="hkv-Rw-scz"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" alpha="0.94999998807907104" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="3mi-2v-oAw">
                                         <rect key="frame" x="0.0" y="300" width="375" height="60"/>
@@ -1586,6 +1622,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLq-Qb-Qzu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-423" y="921"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sy0-ab-ZiR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xr2-Gn-Dej" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZTo-81-teN">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mTF-if-Dgb" kind="relationship" relationship="rootViewController" id="4mN-gh-bnL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g3a-cB-y1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="330" y="921"/>
         </scene>
     </scenes>
     <resources>

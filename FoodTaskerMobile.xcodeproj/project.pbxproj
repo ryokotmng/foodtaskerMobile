@@ -20,6 +20,7 @@
 		A02D0AB3204CA8E7000B9A71 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D0AB2204CA8E7000B9A71 /* PaymentViewController.swift */; };
 		A02D0AB5204F54F0000B9A71 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D0AB4204F54F0000B9A71 /* OrderViewController.swift */; };
 		A02DC1BE209CA0950065C9EB /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02DC1BD209CA0950065C9EB /* DeliveryViewController.swift */; };
+		A02DC1C0209CA2840065C9EB /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02DC1BF209CA2840065C9EB /* StatisticViewController.swift */; };
 		A03CB68D2083082D00DCDFCC /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03CB68C2083082D00DCDFCC /* Helpers.swift */; };
 		A03CB68F20878E6200DCDFCC /* Tray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03CB68E20878E6200DCDFCC /* Tray.swift */; };
 		A03CB691208CCC2500DCDFCC /* TrayViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03CB690208CCC2500DCDFCC /* TrayViewCell.swift */; };
@@ -81,6 +82,7 @@
 		A02D0AB2204CA8E7000B9A71 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		A02D0AB4204F54F0000B9A71 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		A02DC1BD209CA0950065C9EB /* DeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
+		A02DC1BF209CA2840065C9EB /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
 		A03CB68C2083082D00DCDFCC /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		A03CB68E20878E6200DCDFCC /* Tray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tray.swift; sourceTree = "<group>"; };
 		A03CB690208CCC2500DCDFCC /* TrayViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrayViewCell.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				A03CB6962097F17800DCDFCC /* DriverOrdersViewController.swift */,
 				A03CB69F2097FF9000DCDFCC /* DriverMenuViewController.swift */,
 				A02DC1BD209CA0950065C9EB /* DeliveryViewController.swift */,
+				A02DC1BF209CA2840065C9EB /* StatisticViewController.swift */,
 			);
 			path = Driver;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				A01B63F2200C9335009E4871 /* AppDelegate.swift in Sources */,
 				A0F1828C2063FA6D000CE414 /* MealViewCell.swift in Sources */,
 				A0444F9A204ADED8001C9202 /* CustomerMenuTableViewController.swift in Sources */,
+				A02DC1C0209CA2840065C9EB /* StatisticViewController.swift in Sources */,
 				A02D0AB3204CA8E7000B9A71 /* PaymentViewController.swift in Sources */,
 				A02DC1BE209CA0950065C9EB /* DeliveryViewController.swift in Sources */,
 				A0D1DF61205436CB0053875B /* LoginViewController.swift in Sources */,
