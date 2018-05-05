@@ -130,6 +130,8 @@ class APIManager {
             }
         }
     }
+    
+    /***** CUSTOMERS *****/
 
     // APIs getting Restaurant list
     func getRestaurants(completionHandler: @escaping (JSON) -> Void) {
@@ -191,4 +193,23 @@ class APIManager {
         
         requestServer(.get, path, params, URLEncoding(), completionHandler)
     }
+    
+    /***** DRIVERS *****/
+    
+    // API - Getting list of orders that are ready
+    func getDriverOrders(completionHandler: @escaping (JSON) -> Void) {
+        let path = "api/driver/orders/ready/"
+        requestServer(.get, path, nil, URLEncoding(), completionHandler)
+    }
+    
+    // API - Picking up a ready order
+    func pickOrder(orderId: Int, completionHandler: @escaping (JSON) -> Void) {
+        let path = "api/driver/order/pick/"
+        let params: [String: Any] = [
+            "order_id": "\(orderId)",
+            "access_token": self.accessToken
+        ]
+        requestServer(.post, path, params, URLEncoding(), completionHandler)
+    }
+    
 }

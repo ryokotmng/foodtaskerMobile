@@ -150,7 +150,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DriverOrdersCell" id="Mo2-TN-lAU">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DriverOrdersCell" id="Mo2-TN-lAU" customClass="DriverOrderCell" customModule="FoodTaskerMobile" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="122"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mo2-TN-lAU" id="Zfb-5p-8Am">
@@ -221,6 +221,12 @@
                                         <constraint firstAttribute="bottom" secondItem="Gfy-t0-qFe" secondAttribute="bottom" id="mKM-82-wP1"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgCustomerAvatar" destination="yap-oz-vyK" id="tOK-JN-EZl"/>
+                                    <outlet property="lbCustomerAddress" destination="jhq-qX-xXl" id="7x5-Nn-d4P"/>
+                                    <outlet property="lbCustomerName" destination="Zb1-81-p3l" id="r27-M8-2Dc"/>
+                                    <outlet property="lbRestaurantName" destination="8Eo-2d-s5p" id="I1W-td-Ede"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
