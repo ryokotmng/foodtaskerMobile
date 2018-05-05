@@ -239,6 +239,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBarButton" destination="fxg-wP-cvp" id="gD7-XA-hB8"/>
+                        <segue destination="c1I-l3-CQ4" kind="show" identifier="CurrentDelivery" id="Buk-Hh-3KV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OZk-qd-n3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1665,6 +1666,7 @@
         <segue reference="8jx-VD-96h"/>
         <segue reference="cmR-u4-9YV"/>
         <segue reference="TKD-8z-DBv"/>
+        <segue reference="Buk-Hh-3KV"/>
         <segue reference="hRe-oq-mZU"/>
     </inferredMetricsTieBreakers>
 </document>
