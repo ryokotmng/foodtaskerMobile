@@ -22,6 +22,9 @@ class DeliveryViewController: UIViewController {
     
     var orderId: Int?
     
+    var destination: MKPlacemark?
+    var source: MKPlacemark?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,6 +63,14 @@ class DeliveryViewController: UIViewController {
                 self.imgCustomerAvatar.layer.cornerRadius = 50/2
                 self.imgCustomerAvatar.clipsToBounds = true
                 
+                self.getLocation(from, "Customer", { (sou) in
+                    self.source = sou
+                    
+                    self.getLocation(to, "Restaurant", { (des) in
+                        self.destination = des
+                    })
+                })
+                
             } else {
                 
                 self.map.isHidden = true
@@ -77,4 +88,45 @@ class DeliveryViewController: UIViewController {
             }
         }
     }
+}
+
+extension DeliveryViewController: MKMapViewDelegate {
+    
+    // #1 - Delegate method of MKMapViewDelegate
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor = UIColor.blue
+        renderer.lineWidth = 5.0
+        
+        return renderer
+    }
+    
+    // #2 - Convert an address string to a location on the map
+    func getLocation(_ address: String,_ title: String,_ completionHandler: @escaping (MKPlacemark) -> Void) {
+        
+        let geocoder = CLGeocoder()
+        
+        geocoder.geocodeAddressString(address) { (placemarks, error) in
+            
+            if (error != nil) {
+                print("Error: ", error)
+            }
+            
+            if let placemark = placemarks?.first {
+                
+                let coordinates: CLLocationCoordinate2D = placemark.location!.coordinate
+                
+                // Create a pin
+                let dropPin = MKPointAnnotation()
+                dropPin.coordinate = coordinates
+                dropPin.title = title
+                
+                self.map.addAnnotation(dropPin)
+                completionHandler(MKPlacemark.init(placemark: placemark))
+            }
+        }
+    }
+    
 }
