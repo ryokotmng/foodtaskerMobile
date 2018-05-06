@@ -326,7 +326,13 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="icon_menu_24dp" id="Ufg-WX-9rx"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bComplete" destination="od1-56-4Vl" id="Luk-DP-ku3"/>
+                        <outlet property="imgCustomerAvatar" destination="4w6-Cu-sCY" id="x52-cv-W7N"/>
+                        <outlet property="lbCustomerAddress" destination="0q5-PF-4Kb" id="1xM-Oi-Krv"/>
+                        <outlet property="lbCustomerName" destination="sY9-bT-ajX" id="GCb-fD-x1h"/>
+                        <outlet property="map" destination="oZK-14-prb" id="lFq-mL-U71"/>
                         <outlet property="menuBarButton" destination="Ufg-WX-9rx" id="V3I-iP-E6d"/>
+                        <outlet property="viewinfo" destination="UZY-iK-Yew" id="E14-cA-ufP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YW6-AA-hfr" userLabel="First Responder" sceneMemberID="firstResponder"/>
