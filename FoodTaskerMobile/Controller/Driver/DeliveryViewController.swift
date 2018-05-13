@@ -29,6 +29,8 @@ class DeliveryViewController: UIViewController {
     var driverPin: MKPointAnnotation!
     var lastLocation: CLLocationCoordinate2D!
     
+    var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,7 +52,21 @@ class DeliveryViewController: UIViewController {
             
             self.map.showsUserLocation = false
         }
+        
+        // Running the updating location process
+        timer = Timer.scheduledTimer(
+            timeInterval: 1,
+            target: self,
+            selector: #selector(updateLocation(_:)),
+            userInfo: nil, repeats: true)
     }
+    
+    @objc func updateLocation(_ sender: AnyObject) {
+        APIManager.shared.updateLocation(location: self.lastLocation) { (json) in
+            
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         loadData()
     }

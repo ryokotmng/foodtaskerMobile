@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import FBSDKLoginKit
+import CoreLocation
 
 class APIManager {
     static let shared = APIManager()
@@ -219,6 +220,16 @@ class APIManager {
             "access_token": self.accessToken
         ]
         requestServer(.get, path, params, URLEncoding(), completionHandler)
+    }
+    
+    // API - Updating Driver's location
+    func updateLocation(location: CLLocationCoordinate2D, completionHandler: @escaping (JSON) -> Void) {
+        let path = "api/driver/location/update/"
+        let params: [String: Any] = [
+            "access_token": self.accessToken,
+            "location": "\(location.latitude),\(location.longitude)"
+        ]
+        requestServer(.post, path, params, URLEncoding(), completionHandler)
     }
     
 }
