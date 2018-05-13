@@ -25,6 +25,10 @@ class DeliveryViewController: UIViewController {
     var destination: MKPlacemark?
     var source: MKPlacemark?
     
+    var locationManager: CLLocationManager!
+    var driverPin: MKPointAnnotation!
+    var lastLocation: CLLocationCoordinate2D!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +36,19 @@ class DeliveryViewController: UIViewController {
             menuBarButton.target = self.revealViewController()
             menuBarButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        
+        // Show current Driver's location
+        
+        if CLLocationManager.locationServicesEnabled() {
+            
+            locationManager = CLLocationManager()
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startUpdatingLocation()
+            
+            self.map.showsUserLocation = false
         }
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -70,7 +87,7 @@ class DeliveryViewController: UIViewController {
                         self.destination = des
                     })
                 })
-                
+                 
             } else {
                 
                 self.map.isHidden = true
@@ -130,3 +147,36 @@ extension DeliveryViewController: MKMapViewDelegate {
     }
     
 }
+
+extension DeliveryViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let location = locations.last! as CLLocation
+        self.lastLocation = location.coordinate
+        
+        // Create pin annotation for Driver
+        if driverPin != nil {
+            driverPin.coordinate = self.lastLocation
+        } else {
+            driverPin = MKPointAnnotation()
+            driverPin.coordinate = self.lastLocation
+            self.map.addAnnotation(driverPin)
+        }
+        
+        // Reset zoom rect to cover 3 locations
+        var zoomRect = MKMapRectNull
+        for annotation in self.map.annotations {
+            let annotationPoint = MKMapPointForCoordinate(annotation.coordinate)
+            let pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0.1, 0.1)
+            zoomRect = MKMapRectUnion(zoomRect, pointRect)
+        }
+        
+        let insetWidth = -zoomRect.size.width * 0.2
+        let insetHeight = -zoomRect.size.height * 0.2
+        let insetRect = MKMapRectInset(zoomRect, insetWidth, insetHeight)
+        
+        self.map.setVisibleMapRect(insetRect, animated: true)
+    }
+}
+
