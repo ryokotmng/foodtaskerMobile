@@ -22,6 +22,9 @@ class OrderViewController: UIViewController {
     var destination: MKPlacemark?
     var source: MKPlacemark?
     
+    var driverPin: MKPointAnnotation!
+    var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,25 +46,87 @@ class OrderViewController: UIViewController {
             
             let order = json["order"]
             
-            if let orderDetails = order["order_details"].array {
+            if order["status"] != nil {
                 
-                self.lbStatus.text = order["status"].string!.uppercased()
-                self.tray = orderDetails
-                self.tbvMeals.reloadData()
-            }
-            
-            let from = order["restaurant"]["address"].string!
-            let to = order["address"].string!
-            
-            self.getLocation(from, "Restaurant", { (sou) in
-                self.source = sou
+                if let orderDetails = order["order_details"].array {
+                    
+                    self.lbStatus.text = order["status"].string!.uppercased()
+                    self.tray = orderDetails
+                    self.tbvMeals.reloadData()
+                }
                 
-                self.getLocation(to, "Customer", { (des) in
-                    self.destination = des
-                    self.getDirections()
+                let from = order["restaurant"]["address"].string!
+                let to = order["address"].string!
+                
+                self.getLocation(from, "Restaurant", { (sou) in
+                    self.source = sou
+                    
+                    self.getLocation(to, "Customer", { (des) in
+                        self.destination = des
+                        self.getDirections()
+                    })
                 })
-            })
+                
+                if order["status"] != "Delivered" {
+                    self.setTimer()
+                }
+            }
         }
+    }
+
+    func setTimer() {
+        timer = Timer.scheduledTimer(
+            timeInterval: 1,
+            target: self,
+            selector: #selector(getDriverLocation(_:)),
+            userInfo: nil, repeats: true)
+    }
+    
+    @objc func getDriverLocation(_ sender: AnyObject) {
+        APIManager.shared.getDriverLocation { (json) in
+            
+            if let location = json["location"].string {
+                
+                self.lbStatus.text = "ON THE WAY"
+                
+                let split = location.components(separatedBy: ",")
+                let lat = split[0]
+                let lng = split[1]
+                
+                let coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(lat)!, longitude: CLLocationDegrees(lng)!)
+                
+                // Create pin annotation for Driver
+                if self.driverPin != nil {
+                    self.driverPin.coordinate = coordinate
+                } else {
+                    self.driverPin = MKPointAnnotation()
+                    self.driverPin.coordinate = coordinate
+                    self.map.addAnnotation(self.driverPin)
+                }
+                
+                // Reset zoom rect to cover 3 locations
+                self.autoZoom()
+                
+            } else {
+                self.timer.invalidate()
+            }
+        }
+    }
+    
+    func autoZoom() {
+        
+        var zoomRect = MKMapRectNull
+        for annotation in self.map.annotations {
+            let annotationPoint = MKMapPointForCoordinate(annotation.coordinate)
+            let pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0.1, 0.1)
+            zoomRect = MKMapRectUnion(zoomRect, pointRect)
+        }
+        
+        let insetWidth = -zoomRect.size.width * 0.2
+        let insetHeight = -zoomRect.size.height * 0.2
+        let insetRect = MKMapRectInset(zoomRect, insetWidth, insetHeight)
+        
+        self.map.setVisibleMapRect(insetRect, animated: true)
     }
 }
 
