@@ -255,13 +255,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oZK-14-prb">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <connections>
                                     <outlet property="delegate" destination="c1I-l3-CQ4" id="mdC-Wt-GBU"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="od1-56-4Vl">
-                                <rect key="frame" x="8" y="720" width="359" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="od1-56-4Vl">
+                                <rect key="frame" x="8" y="719" width="359" height="50"/>
                                 <color key="backgroundColor" red="0.90980392156862744" green="0.24705882352941178" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="h1v-RS-vzf"/>
@@ -270,6 +270,9 @@
                                 <state key="normal" title="COMPLETE ORDER">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="CompleteOrder:" destination="c1I-l3-CQ4" eventType="touchUpInside" id="UdX-tG-TfS"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZY-iK-Yew">
                                 <rect key="frame" x="8" y="632" width="359" height="80"/>
@@ -335,7 +338,8 @@
                         <outlet property="lbCustomerName" destination="sY9-bT-ajX" id="GCb-fD-x1h"/>
                         <outlet property="map" destination="oZK-14-prb" id="lFq-mL-U71"/>
                         <outlet property="menuBarButton" destination="Ufg-WX-9rx" id="V3I-iP-E6d"/>
-                        <outlet property="viewinfo" destination="UZY-iK-Yew" id="E14-cA-ufP"/>
+                        <outlet property="viewInfo" destination="UZY-iK-Yew" id="j3z-YU-Fb0"/>
+                        <segue destination="HaS-WZ-A5N" kind="show" identifier="ViewOrders" id="ru3-B9-dWl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YW6-AA-hfr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1676,6 +1680,7 @@
         <segue reference="cmR-u4-9YV"/>
         <segue reference="TKD-8z-DBv"/>
         <segue reference="Buk-Hh-3KV"/>
-        <segue reference="hRe-oq-mZU"/>
+        <segue reference="ru3-B9-dWl"/>
+        <segue reference="iKs-v0-gJk"/>
     </inferredMetricsTieBreakers>
 </document>
