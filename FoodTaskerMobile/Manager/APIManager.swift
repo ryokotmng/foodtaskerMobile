@@ -251,4 +251,13 @@ class APIManager {
         requestServer(.post, path, params, URLEncoding(), completionHandler)
     }
     
+    // API - Getting Driver's revenue
+    func getDriverRevenue(completionHandler: @escaping (JSON) -> Void) {
+        let path = "api/driver/revenue/"
+        let params: [String: Any] = [
+            "access_token": self.accessToken
+        ]
+        requestServer(.get, path, params, URLEncoding(), completionHandler)
+    }
+    
 }

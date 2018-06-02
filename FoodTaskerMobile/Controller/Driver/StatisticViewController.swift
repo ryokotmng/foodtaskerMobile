@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Charts
 
 class StatisticViewController: UIViewController {
 
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
+    @IBOutlet weak var viewChart: BarChartView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
